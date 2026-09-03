@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobius365 — Productivity Tracker</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+
+  <div id="login-screen">
+    <div class="login-card">
+      <div class="brandbar">
+        <div class="tag">MOBIUS365</div>
+        <h1>Productivity Tracker</h1>
+      </div>
+      <form id="login-form">
+        <div class="field">
+          <label for="login-user">Username / Email</label>
+          <input id="login-user" type="text" autocomplete="username" required>
+        </div>
+        <div class="field">
+          <label for="login-pass">Password</label>
+          <input id="login-pass" type="password" autocomplete="current-password" required>
+        </div>
+        <button class="btn btn-primary" type="submit">Log in</button>
+        <div id="login-error" style="display:none;"></div>
+      </form>
+    </div>
+  </div>
+
+  <div id="shell" style="display:none;">
+    <header class="topbar">
+      <div class="brand">
+        <span class="name">Mobius365</span>
+        <span class="sub">Productivity Tracker</span>
+      </div>
+      <div class="who">
+        <span id="who-name"></span>
+        <span class="role-badge" id="who-role"></span>
+        <button id="logout-btn">Log out</button>
+      </div>
+    </header>
+    <div class="body-wrap">
+      <nav class="side" id="side-nav"></nav>
+      <main class="content" id="main-content"></main>
+    </div>
+  </div>
+
+</div>
+<div class="toast" id="toast"></div>
+<div class="modal-bg" id="modal-bg"><div class="modal" id="modal-body"></div></div>
+<script src="app.js"></script>
+</body>
+</html>
